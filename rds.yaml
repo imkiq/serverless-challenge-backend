@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+
+Resources:
+  EmployeesDatabase:
+    Type: AWS::RDS::DBInstance
+    Properties:
+      AllocatedStorage: 20
+      DBInstanceClass: db.t3.micro
+      DBInstanceIdentifier: employees-database
+      PubliclyAccessible: true
+      StorageType: gp2
+      MasterUsername: root
+      MasterUserPassword: Admin12#4
+      Engine: mysql
+      EngineVersion: 8.0.28
